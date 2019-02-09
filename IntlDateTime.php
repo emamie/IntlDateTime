@@ -11,7 +11,7 @@
  * @license     GNU General Public License 3.0 (http://www.gnu.org/licenses/gpl.html)
  */
 
-namespace farhadi;
+namespace Emamie;
 
 class IntlDateTime extends \DateTime {
 
@@ -86,7 +86,7 @@ class IntlDateTime extends \DateTime {
 	 * @param string $time The date string
 	 * @return string Detected ICU pattern on success, FALSE otherwise.
 	 */
-	protected function guessPattern($time) {
+	public function guessPattern($time) {
 		$time = $this->latinizeDigits(trim($time));
 
 		$shortDateRegex = '(\d{2,4})(-|\\\\|/)\d{1,2}\2\d{1,2}';
